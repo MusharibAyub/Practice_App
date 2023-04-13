@@ -1,0 +1,17 @@
+.box{
+    h1{
+        text-align: center;
+    }
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: groove 1px black;
+        .label{
+            font-weight: 900;
+        }
+        p{
+            margin: 10px 0px;
+        }
+    }
+}

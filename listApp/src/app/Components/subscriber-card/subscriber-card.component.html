@@ -1,0 +1,7 @@
+<div class="card">
+        <h5>{{subscriber.name}}</h5>
+        <h5>{{subscriber.subscribedToChannel}}</h5>
+        <h5>{{subscriber.subscribeDate | date:'dd/MM/yyyy':'UTC+5'}}</h5>
+        <div class="delete" routerLink="/subscriber/{{subscriber._id}}">Detail</div>
+        <div class="delete" (click)="handleDelete(subscriber._id)">Delete</div>
+</div>

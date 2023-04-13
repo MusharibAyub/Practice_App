@@ -1,0 +1,7 @@
+<div class="container">
+        <app-subscriber-card
+            *ngFor="let subscriber of subscribers;"
+            [subscriber]="subscriber"
+            (del)="handleDel($event)">
+        </app-subscriber-card>
+</div>

@@ -1,0 +1,20 @@
+<div class="box">
+    <h1>Add Subscriber</h1>
+    <form (ngSubmit)="handleSubmit(form.value, form.valid)" #form="ngForm" novalidate>
+        <div>
+            <p class="general">Name:</p>  
+            <input type="text" name="name" #name="ngModel" required ngModel>
+            <div class="error-container">
+                <p *ngIf="name.errors?.['required'] && name.touched" class="error">Name Required</p>
+            </div>
+        </div>
+        <div>
+            <p class="general">Channel Name:</p>
+            <input type="text" name="subscribedToChannel" #subscribedToChannel="ngModel" required ngModel>
+            <div class="error-container">
+                <p *ngIf="subscribedToChannel.errors?.['required'] && subscribedToChannel.touched" class="error">Channel Name Required</p>
+            </div>
+        </div>
+        <button type="submit" [disabled]="form.invalid">Submit</button>
+    </form>
+</div>

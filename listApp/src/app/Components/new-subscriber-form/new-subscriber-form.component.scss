@@ -1,0 +1,43 @@
+.box{
+
+    h1{
+        text-align: center;
+        background-color: red;
+        margin: 0;
+        border-radius: 10px 10px 0px 0px;
+        transform: translateY(10px);
+    }
+    form {
+        background-color: wheat;
+        padding: 20px;
+        border-radius: 0px 0px 10px 10px;
+        z-index: 2;
+        div {
+            .general {
+                display: inline-block;
+                min-width: 100px;
+                margin: 5px;
+            }
+            &.error-container{
+                height: 10px;
+            }
+            p{
+                &.error {
+                    text-align: right;
+                    font-size: 10px;
+                    color: red;
+                    margin: 0;
+                }
+            }
+        }
+        button{
+            width: 100%;
+            border-radius: 9px;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 20px;
+            background-color: greenyellow;
+            cursor: pointer;
+        }   
+    }
+}

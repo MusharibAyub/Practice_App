@@ -1,0 +1,29 @@
+<div class="box">
+    <h1>Subscriber Detail</h1>
+    <div class="row">
+        <p class="label">ID: </p>
+        <p class="value">{{data._id}}</p>
+    </div>
+    <div class="row">
+        <p class="label">Name: </p>
+        <p class="value" *ngIf="!editName" (click)="toggleEditName()">{{data.name}}</p>
+        <input type="text" 
+        *ngIf="editName" 
+        #nameInput 
+        [value]="data.name" 
+        (keydown.enter)="handleEdit('name', nameInput.value)">
+    </div>
+    <div class="row">
+        <p class="label">Subscribed To Channel: </p>
+        <p class="value" *ngIf="!editChannel" (click)="toggleEditChannel()">{{data.subscribedToChannel}}</p>
+        <input type="text" 
+        *ngIf="editChannel" 
+        #channelInput 
+        [value]="data.subscribedToChannel"
+        (keydown.enter)="handleEdit('subscribedToChannel', channelInput.value)">
+    </div>
+    <div class="row">
+        <p class="label">Subscribe Date: </p>
+        <p class="value">{{data.subscribeDate}}</p>
+    </div>
+</div>
